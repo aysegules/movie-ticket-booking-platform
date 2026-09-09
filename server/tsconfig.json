@@ -20,6 +20,9 @@
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
 
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+
     // Style Options
     // "noImplicitReturns": true,
     // "noImplicitOverride": true,
