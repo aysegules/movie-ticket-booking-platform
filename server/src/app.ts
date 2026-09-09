@@ -2,7 +2,7 @@ import express, { type Request, type Response } from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import { config } from "dotenv";
-import { errorHandler } from "./middlewares/error.middleware";
+import { errorHandler } from "./middlewares/error.middleware.ts";
 import { clerkMiddleware } from "@clerk/express";
 import { serve } from "inngest/express";
 import { inngest, functions } from "./inngest/index";
