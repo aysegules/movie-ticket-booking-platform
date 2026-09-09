@@ -13,18 +13,4 @@ const prisma = new PrismaClient({
       : ["error"],
 });
 
-const connectDB = async () => {
-  try {
-    await prisma.$connect();
-    console.log("Database connected via Prisma");
-  } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
-    console.error(`Database connection error : ${message}`);
-    process.exit(1);
-  }
-};
-
-const disconnectDB = async () => {
-  await prisma.$disconnect();
-};
-export { prisma, connectDB, disconnectDB };
+export { prisma };
