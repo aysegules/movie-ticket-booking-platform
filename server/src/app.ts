@@ -5,7 +5,7 @@ import { config } from "dotenv";
 import { errorHandler } from "./middlewares/error.middleware.ts";
 import { clerkMiddleware } from "@clerk/express";
 import { serve } from "inngest/express";
-import { inngest, functions } from "./inngest/index";
+import { inngest, functions } from "./inngest/index.ts";
 
 config();
 
