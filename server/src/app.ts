@@ -11,12 +11,6 @@ config();
 
 const app = express();
 
-const VERSION = process.env.VERSION
-  ? process.env.VERSION.startsWith("/")
-    ? process.env.VERSION
-    : `/${process.env.VERSION}`
-  : "/api/v1";
-
 const allowedOrigins = (process.env.CORS_ORIGIN || "http://localhost:5173")
   .split(",")
   .map((origin) => origin.trim())
@@ -41,7 +35,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(clerkMiddleware());
 
-app.get(VERSION, (req: Request, res: Response) => {
+app.get("/", (req: Request, res: Response) => {
   return res.status(200).json({
     message: "Server is ready...",
   });
