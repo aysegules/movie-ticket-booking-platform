@@ -1,9 +1,8 @@
 import { Inngest } from "inngest";
 import { prisma } from "../../lib/prisma.ts";
 
-export const inngest = new Inngest({ id: "my-app" });
+export const inngest = new Inngest({ id: "qucik-show" });
 
-//inngest func to save user data to db
 const syncUserCreation = inngest.createFunction(
   { id: "sync-user-from-clerk", triggers: [{ event: "clerk/user.created" }] },
   async ({ event }) => {
@@ -20,8 +19,6 @@ const syncUserCreation = inngest.createFunction(
     await prisma.user.create({
       data: userData,
     });
-
-    //create useer with prisma
   },
 );
 
