@@ -9,7 +9,7 @@ const server = app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
 
-const shutdown = (exitCode) => {
+const shutdown = (exitCode: number | string) => {
   console.log("Shutting down gracefully...");
 
   server.close(() => {

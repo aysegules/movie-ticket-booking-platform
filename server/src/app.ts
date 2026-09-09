@@ -1,4 +1,4 @@
-import express from "express";
+import express, { type Request, type Response } from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import { config } from "dotenv";
@@ -41,7 +41,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(clerkMiddleware());
 
-app.get(VERSION, (req, res) => {
+app.get(VERSION, (req: Request, res: Response) => {
   return res.status(200).json({
     message: "Server is ready...",
   });

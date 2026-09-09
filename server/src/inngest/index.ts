@@ -1,5 +1,5 @@
 import { Inngest } from "inngest";
-import { prisma } from "../../lib/prisma.js";
+import { prisma } from "../../lib/prisma";
 
 export const inngest = new Inngest({ id: "qucik-show" });
 
