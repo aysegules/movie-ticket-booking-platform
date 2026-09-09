@@ -2,10 +2,10 @@ import express, { type Request, type Response } from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import { config } from "dotenv";
-import { errorHandler } from "./middlewares/error.middleware.js";
+import { errorHandler } from "./middlewares/error.middleware";
 import { clerkMiddleware } from "@clerk/express";
 import { serve } from "inngest/express";
-import { inngest, functions } from "./inngest/index.js";
+import { inngest, functions } from "./inngest/index";
 
 config();
 
